@@ -1,0 +1,7 @@
+# Налаштування редакторів коду (VS Code, WebStorm, Cursor тощо)
+.vscode/
+.idea/
+
+# Системні приховані файли macOS та Windows
+.DS_Store
+Thumbs.db
