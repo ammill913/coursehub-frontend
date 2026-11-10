@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CourseHub | Реєстрація</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="js/config.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/layout.js"></script>
+    <script>CH.redirectIfLoggedIn();</script>
+</head>
+<body>
+    <header id="site-header" class="header"></header>
+
+    <main class="container narrow">
+        <section class="page-header">
+            <h2>Реєстрація</h2>
+            <p>Поля, позначені зірочкою, обовʼязкові.</p>
+        </section>
+
+        <div id="message"></div>
+
+        <form id="register-form" class="form card-form">
+            <div class="form-row">
+                <label for="username">Username *</label>
+                <input id="username" name="username" type="text" minlength="3" maxlength="30" required autocomplete="username">
+                <small class="field-error" data-for="username"></small>
+            </div>
+            <div class="form-row">
+                <label for="first_name">Імʼя</label>
+                <input id="first_name" name="first_name" type="text" maxlength="50" autocomplete="given-name">
+                <small class="field-error" data-for="first_name"></small>
+            </div>
+            <div class="form-row">
+                <label for="last_name">Прізвище</label>
+                <input id="last_name" name="last_name" type="text" maxlength="50" autocomplete="family-name">
+                <small class="field-error" data-for="last_name"></small>
+            </div>
+            <div class="form-row">
+                <label for="email">Email *</label>
+                <input id="email" name="email" type="email" maxlength="254" required autocomplete="email">
+                <small class="field-error" data-for="email"></small>
+            </div>
+            <div class="form-row">
+                <label for="password">Пароль * (мінімум 8 символів)</label>
+                <input id="password" name="password" type="password" maxlength="128" required autocomplete="new-password">
+                <small class="field-error" data-for="password"></small>
+            </div>
+            <div class="form-row">
+                <label for="password_confirm">Повторіть пароль *</label>
+                <input id="password_confirm" name="password_confirm" type="password" maxlength="128" required autocomplete="new-password">
+                <small class="field-error" data-for="password_confirm"></small>
+            </div>
+            <div class="form-buttons">
+                <button type="submit" class="btn">Зареєструватися</button>
+            </div>
+            <p class="form-hint">Вже є акаунт? <a href="login.html">Увійти</a></p>
+        </form>
+    </main>
+
+    <script src="js/register.js"></script>
+</body>
+</html>

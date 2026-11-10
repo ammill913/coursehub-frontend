@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CourseHub | Керування каталогом</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="js/config.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/layout.js"></script>
+    <script>CH.requireAuth();</script>
+</head>
+<body>
+    <header id="site-header" class="header"></header>
+
+    <main class="container">
+        <section class="page-header">
+            <h2>Керування каталогом</h2>
+            <p id="role-note">Ця сторінка доступна лише авторизованим користувачам.</p>
+        </section>
+
+        <div id="message"></div>
+        <div id="tabs" class="tabs"></div>
+        <div id="table-box" class="table-wrap"></div>
+        <div id="form-box" class="panel"></div>
+    </main>
+
+    <script src="js/manage.js"></script>
+</body>
+</html>
