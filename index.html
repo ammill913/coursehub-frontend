@@ -3,32 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Курси</title>
+    <title>CourseHub | Курси</title>
     <link rel="stylesheet" href="style.css">
+    <script src="js/config.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/layout.js"></script>
 </head>
 <body>
-    <header class="header">
-        <div class="container">
-            <h1 class="logo">EduSystem</h1>
-            <nav class="nav">
-                <a href="#" class="active">Курси</a>
-                <a href="#">Викладачі</a>
-                <a href="#">Факультети</a>
-            </nav>
-        </div>
-    </header>
+    <header id="site-header" class="header"></header>
 
     <main class="container">
         <section class="page-header">
             <h2>Доступні курси</h2>
-            <p>Перелік актуальних навчальних дисциплін</p>
+            <p>Перелік навчальних дисциплін. Ця сторінка відкрита для всіх.</p>
         </section>
+
+        <div class="filters">
+            <input id="search" type="search" placeholder="Пошук за назвою">
+            <select id="faculty-filter">
+                <option value="">Усі факультети</option>
+            </select>
+        </div>
 
         <div id="courses-grid" class="courses-grid">
             <div class="loading-spinner">Отримуємо дані з сервера...</div>
         </div>
     </main>
 
-    <script src="app.js"></script>
+    <script src="js/courses.js"></script>
 </body>
 </html>
