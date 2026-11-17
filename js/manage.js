@@ -57,7 +57,6 @@
 
     document.addEventListener('DOMContentLoaded', async () => {
         if (!CH.isLoggedIn()) return;
-
         const tabs = document.getElementById('tabs');
         const tableBox = document.getElementById('table-box');
         const formBox = document.getElementById('form-box');
@@ -91,11 +90,7 @@
             const table = CH.el('table', 'table');
             const head = CH.el('tr');
             for (const [label] of columns) head.append(CH.el('th', '', label));
-            
-            if (state.isAdmin) {
-                head.append(CH.el('th', '', 'Дії'));
-            }
-            
+            head.append(CH.el('th', '', 'Дії'));
             table.append(head);
 
             if (items.length === 0) {
