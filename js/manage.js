@@ -144,11 +144,6 @@
         // ---------- form ----------
 
         const renderForm = () => {
-            if (!state.isAdmin) {
-                formBox.replaceChildren();
-                return;
-            }
-
             const resource = RESOURCES[state.tab];
             const editing = state.editing;
             const form = CH.el('form', 'form');
